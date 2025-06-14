@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = import.meta.env.VITE_APP_BACKEND_URL || '/api'; // Changed this line
 
 export const generateContent = async (pdfFile, count, questionType, contentType) => {
   const formData = new FormData();
