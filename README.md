@@ -1,12 +1,87 @@
-# React + Vite
+# PDF Quiz Generator Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the PDF Quiz Generator project. It provides a user-friendly interface to upload PDF files, generate quizzes, extract vocabulary, and summarize text using the backend API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **PDF Upload:** Upload PDF files for processing.
+- **Quiz Generation:** View multiple-choice and true/false questions generated from PDF content.
+- **Vocabulary Extraction:** Display key vocabulary words with definitions and parts of speech.
+- **Text Summarization:** Show concise summaries of PDF content.
+- **Responsive UI:** Built with modern web technologies for a seamless user experience.
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+frontend/
+  src/
+    components/
+      QuizGenerator.jsx
+      VocabularyExtractor.jsx
+      TextSummarizer.jsx
+      PdfUploader.jsx
+      ...
+    App.jsx
+    main.jsx
+    api/
+      api.js
+    assets/
+    styles/
+  public/
+    index.html
+  package.json
+  vite.config.js
+  README.md
+```
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+```sh
+git clone https://github.com/ashokpaudelapril/pdf_quiz_generator_frontend
+```
+
+### 2. Install Dependencies
+
+```sh
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env` file in the `frontend/` directory if you need to override the backend API URL:
+
+```
+VITE_API_URL=http://localhost:8000
+```
+
+Adjust the URL if your backend is running elsewhere.
+
+### 4. Run the Development Server
+
+```sh
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+## Usage
+
+1. Open the frontend in your browser.
+2. Upload a PDF file.
+3. Choose to generate a quiz, extract vocabulary, or summarize the text.
+4. View and interact with the results.
+
+## Notes
+
+- Ensure the backend server is running and accessible at the API URL configured.
+- For production, build the app with `npm run build` and serve the static files.
+
+## License
+
+MIT License
+
+---
+
+For questions or contributions, please open an issue or pull request on the [GitHub repository](https://github.com/ashokpaudelapril/pdf_quiz_generator_frontend)
